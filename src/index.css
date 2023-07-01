@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Ubuntu:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+
+body {
+  margin: 0;
+  overflow-x: hidden ;
+
+}
+
+.input ::placeholder {
+  text-align: center;
+  line-height: inherit;
+}
+
+.span {
+  color: orange;
+  font-family: Walter Turncoat;
+  text-transform: uppercase; 
+  font-weight: bold;
+}
+
+.sub {
+  position: absolute;
+  top: 99vh;
+  width: 100%;
+  
+}
