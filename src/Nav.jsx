@@ -44,6 +44,7 @@ function Nav() {
       justifyContent={"space-between"}
       alignItems={"center"}
       bgcolor={"primary.main"}
+      width={"100vw"}
     >
       <Button onClick={handleShare}>
         <ShareIcon sx={{ color: "orange" }} />

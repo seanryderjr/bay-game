@@ -5,8 +5,10 @@ import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
 import { Modal } from "@mui/material";
 import { GiCrab } from "react-icons/gi";
+import { TextField } from "@mui/material";
+import { Stack } from "@mui/material";
+import { Link } from "react-router-dom";
 
-import { useForm, ValidationError } from '@formspree/react';
 
 
 const style = {
@@ -107,7 +109,6 @@ const marylandFacts = [
 
 function Home() {
   
-    const [state, handleSubmit] = useForm("mwkdeajy");
 
 
    
@@ -131,11 +132,8 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '494756');
+
+    
 
 
   return (
@@ -179,8 +177,8 @@ function Home() {
             pb={0}
           >
             Below, you will find 3 activities that will help you save the bay! Click{' '}
-            <span className="span">'Single Player'</span> if you're by yourself,{' '}
-            <span className="span">'Multiplayer'</span> if you're with a friend, or{' '}
+            <span className="span">'Single Player'</span> if you want to play a fun game by yourself,{' '}
+            <span className="span">'Multiplayer'</span> for a Bingo style search game, or{' '}
             <span className="span">'Quiz'</span> if you think you are ready to show off your Maryland knowledge!
           </Typography>
         </Box>
@@ -197,6 +195,7 @@ function Home() {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
+
           <Box sx={style}>
             <Typography fontFamily={'Ubuntu'} id="modal-modal-title" variant="h6" component="h2">
               Disclaimer:
@@ -206,30 +205,19 @@ function Home() {
             </Typography>
           </Box>
         </Modal>
+        <form action="">
+          <Stack
+          direction={"row"}
+          spacing={2}
+          >
+          <TextField variant="filled"  label="Enter Email to Subscribe!" InputLabelProps={{ sx: { color: 'orange' } }}   />
+          <Button
+          variant="contained" sx={{ backgroundColor: 'orange', borderRadius: '20px', mb: 2, mt: 2 }}
+          >Submit</Button>
+          </Stack>
+        </form>
        
-        <form style={{ display: "flex", flexDirection: "column", alignItems: "center"}}  onSubmit={handleSubmit}>
-      
-      <input
-      placeholder="Enter Email To Subscribe!"
-        id="email"
-        type="email" 
-        name="email"
-        required
-        style={{width: '200px', height: '30px', borderRadius: '20px', border: 'none', marginBottom: '10px'}}
-      />
-      <ValidationError 
-        prefix="Email" 
-        field="email"
-        errors={state.errors}
-      />
-      
-      <button style={{backgroundColor: 'orange', height: '30px', borderRadius: '20px',}}  type="submit" disabled={state.submitting}>
-       <Typography
-       color={'white'}
-       paddingX={2}
-       >SUBSCRIBE</Typography>
-      </button>
-    </form>
+     
 
       </Box>
 
@@ -241,7 +229,11 @@ function Home() {
         flexDirection={"column"}
         mt={5}
       >
+        <Link
+          to="/single"
+        >
         <Button
+        
       
           sx={{ backgroundColor: 'orange', borderRadius: '20px',height: 50,  width: '200px', mt: 2 }}
           variant="contained"
@@ -250,6 +242,10 @@ function Home() {
             Single Player
           </Typography>
         </Button>
+        </Link>
+        <Link
+        to="/multi"
+        >
         <Button
           sx={{ backgroundColor: 'orange', borderRadius: '20px', width: '200px', mt: 2, height: 50, }}
           variant="contained"
@@ -258,6 +254,8 @@ function Home() {
             Multiplayer
           </Typography>
         </Button>
+        </Link>
+       
         <Button
           sx={{ backgroundColor: 'orange', borderRadius: '20px',height: 50, width: '200px', mt: 2 }}
           variant="contained"
@@ -266,6 +264,7 @@ function Home() {
             Quiz
           </Typography>
         </Button>
+        
       </Box>
       <Box
         display={'flex'}

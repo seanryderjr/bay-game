@@ -5,6 +5,12 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Avatar from '@mui/material/Avatar';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+
 
 
 export default function SimpleAccordion() {
@@ -52,10 +58,55 @@ export default function SimpleAccordion() {
           >Bridges</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+        <FormControl sx={{alignItems: 'flex-end', display: 'flex'}}  component="fieldset">
+      <FormGroup  aria-label="position" column>
+      <FormControlLabel
+          value="end"
+          control={<Checkbox  sx={{ color: 'orange' }} color='default' />}
+          label="Chesapeake Bay Bridge"
+          labelPlacement="end"
+          
+          sx={{
+            color: 'white',
+            fontFamily: 'Ubuntu',
+            fontWeight: '500',
+          }}
+        />
+        <FormControlLabel
+          value="end"
+          control={<Checkbox sx={{ color: 'orange' }} color='default' />}
+          label="Kent Island Narrows Bridge"
+          labelPlacement="end"
+          sx={{
+            color: 'white',
+            fontFamily: 'Ubuntu',
+            fontWeight: 'bold',
+          }}
+        />
+        <FormControlLabel
+          value="end"
+          control={<Checkbox sx={{ color: 'orange' }} color='default' />}
+          label="Nanticoke River Bridge"
+          labelPlacement="end"
+          sx={{
+            color: 'white',
+            fontFamily: 'Ubuntu',
+            fontWeight: 'bold',
+          }}
+        />
+        <FormControlLabel
+          value="end"
+          control={<Checkbox sx={{ color: 'orange' }} color='default' />}
+          label="Harry W. Kelley Bridge"
+          labelPlacement="end"
+          sx={{
+            color: 'white',
+            fontFamily: 'Ubuntu',
+            fontWeight: 'bold',
+          }}
+        />
+      </FormGroup>
+    </FormControl>
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -93,12 +144,55 @@ export default function SimpleAccordion() {
           >Road Signs</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography
+        <FormControl sx={{alignItems: 'flex-end', display: 'flex'}}  component="fieldset">
+      <FormGroup  aria-label="position" column>
+      <FormControlLabel
+          value="end"
+          control={<Checkbox  sx={{ color: 'orange' }} color='default' />}
+          label="Click it or Ticket"
+          labelPlacement="end"
           
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+          sx={{
+            color: 'white',
+            fontFamily: 'Ubuntu',
+            fontWeight: '500',
+          }}
+        />
+        <FormControlLabel
+          value="end"
+          control={<Checkbox sx={{ color: 'orange' }} color='default' />}
+          label="Sign thats says PHILADELPHIA"
+          labelPlacement="end"
+          sx={{
+            color: 'white',
+            fontFamily: 'Ubuntu',
+            fontWeight: 'bold',
+          }}
+        />
+        <FormControlLabel
+          value="end"
+          control={<Checkbox sx={{ color: 'orange' }} color='default' />}
+          label="Nanticoke River Bridge"
+          labelPlacement="end"
+          sx={{
+            color: 'white',
+            fontFamily: 'Ubuntu',
+            fontWeight: 'bold',
+          }}
+        />
+        <FormControlLabel
+          value="end"
+          control={<Checkbox sx={{ color: 'orange' }} color='default' />}
+          label="Harry W. Kelley Bridge"
+          labelPlacement="end"
+          sx={{
+            color: 'white',
+            fontFamily: 'Ubuntu',
+            fontWeight: 'bold',
+          }}
+        />
+      </FormGroup>
+    </FormControl>
         </AccordionDetails>
       </Accordion>
       <Accordion

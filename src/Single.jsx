@@ -42,25 +42,11 @@ function Single() {
                 >
                     How to play: It's easy! Just <CheckCircleIcon sx={{ color: 'orange', transform: 'translateY(5px)' }} /> the items in each category. When you check off all of the items in a category, your letter will light up. Spell <span style={{color: 'orange', fontWeight: 'bold'}}>SAVE THE BAY</span>   and win!
                 </Typography>
-                <Box
-                display={'flex'}
-                justifyContent={'center'}
-                alignItems={'center'}
-                flexDirection={'row'}
-
-                >
-            <TextField
-            underline={'none'}
-
-
-
-            className="input"  sx={{  backgroundColor: 'white', borderRadius: '20px', }} variant="standard"  />
-            <Button sx={{backgroundColor: 'orange', borderRadius: '20px'}} variant="contained">SUBMIT</Button>
-            </Box>
+               
             </Box>
             <Box
             position={'absolute'}
-            top={300}
+            top={250}
             >
 
             <Accordion
